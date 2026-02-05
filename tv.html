@@ -59,25 +59,41 @@
             transform: translateX(-50%);
         }
         
+        .gallery-section .section-title h4 {
+            color: #ff6b35;
+            font-size: 1.3rem;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 30px;
             margin-top: 20px;
         }
         
         .gallery-item {
             position: relative;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            aspect-ratio: 1/1;
+            background: white;
+            display: flex;
+            flex-direction: column;
         }
         
         .gallery-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gallery-image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
         }
         
         .gallery-image {
@@ -92,10 +108,78 @@
             transform: scale(1.1);
         }
         
+        /* Product Pricing Styles */
+        .product-pricing {
+            padding: 20px 15px;
+            background: white;
+            text-align: center;
+            border-top: 1px solid #eee;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .price-original {
+            margin-bottom: 5px;
+        }
+        
+        .original-price {
+            color: #ff0000;
+            text-decoration: line-through;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .price-discounted {
+            margin-top: 5px;
+        }
+        
+        .discounted-price {
+            color: #333;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ff6b35;
+        }
+        
+        .product-name {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        /* Discount badge */
+        .discount-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff6b35;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            z-index: 2;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        }
+        
         /* Responsive adjustments */
-        @media (max-width: 1024px) {
+        @media (max-width: 1200px) {
             .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .gallery-image-container {
+                height: 220px;
             }
         }
         
@@ -112,13 +196,35 @@
             .gallery-section .section-title h2 {
                 font-size: 1.8rem;
             }
+            
+            .gallery-image-container {
+                height: 200px;
+            }
+            
+            .discounted-price {
+                font-size: 1.3rem;
+            }
+            
+            .original-price {
+                font-size: 1rem;
+            }
         }
         
-        @media (max-width: 480px) {
+        @media (max-width: 576px) {
             .gallery-grid {
                 grid-template-columns: 1fr;
-                max-width: 300px;
+                max-width: 350px;
                 margin: 0 auto;
+                gap: 25px;
+            }
+            
+            .gallery-image-container {
+                height: 250px;
+            }
+            
+            .discount-badge {
+                font-size: 0.8rem;
+                padding: 5px 10px;
             }
         }
         
@@ -158,6 +264,20 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+        /* Mobile menu styles */
+        .main-navigation {
+            display: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .main-navigation.open {
+            display: block;
+        }
+
+        .main-navigation.open .navigation-box {
+            background-color: #0384CE;
+        }
     </style>
 </head>
 
@@ -165,135 +285,198 @@
     <div class="preloader">
         <div class="spinner"></div>
     </div><!-- /.preloader -->
-    
     <div class="page-wrapper">
-        <!-- Top Bar -->
         <section class="topbar-one">
             <div class="container">
                 <ul class="topbar-one__contact">
-                    <li class="topbar-one__contact-item">
-                        <a href="mailto:Rrockstarr999@gmail.com">
-                            <i class="material-icons">email</i> Rrockstarr999@gmail.com
-                        </a>
-                    </li>
-                    <li class="topbar-one__contact-item">
-                        <a href="tel:9178134139">
-                            <i class="material-icons">local_phone</i>9178134139
-                        </a>
-                    </li>
+                    <li class="topbar-one__contact-item"><a href="mailto:Rrockstarr999@gmail.com"><i
+                                class="material-icons">email</i> Rrockstarr999@gmail.com</a></li>
+                    <li class="topbar-one__contact-item"><a href="tel:9178134139"><i
+                                class="material-icons">local_phone</i>9178134139</a></li>
                 </ul><!-- /.topbar-one__contact -->
                 <div class="topbar-one__buttons">
                     <a href="contact.html" class="topbar-one__btn">Get in Touch</a>
                 </div><!-- /.topbar-one__buttons -->
             </div><!-- /.container -->
         </section><!-- /.topbar-one -->
-        
-        <!-- Header -->
         <header class="site-header header-one">
             <nav class="navbar navbar-expand-lg navbar-light header-navigation stricky">
-                <div class="container clearfix"
-                    style="display: flex; align-items: center; justify-content: space-between;">
-                    <!-- Logo -->
-                    <div class="logo-box" style="flex: 1;">
+                <div class="container clearfix">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="logo-box clearfix">
                         <a class="navbar-brand" href="index.html">
                             <img src="images/resources/electronics-logo1.png" alt="Awesome Image"
                                 style="height:100px; width:auto;" />
                         </a>
-                    </div>
-
-                    <!-- Unique Electronics Header in Middle -->
-                    <div class="brand-title" style="flex: 1; text-align: center;">
-                        <h2 style="color: #ff6b35; margin: 0; font-size: 1.9rem; font-weight: bold; padding-left: 80%;">
-                            Unique Electronics</h2>
-                    </div>
-
-                    <!-- Navigation Menu -->
-                    <div class="main-navigation" style="flex: 1; text-align: right;">
-                        <ul class="navigation-box"
-                            style="display: inline-flex; list-style: none; padding: 0; margin: 0;">
-                            <li class="current" style="margin: 0 10px;">
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li style="margin: 0 10px;">
-                                <a href="about-3.html">About</a>
-                            </li>
-                            <li style="margin: 0 10px;">
-                                <a href="brand.html">Brand</a>
-                            </li>
-                            <li style="margin: 0 10px;">
-                                <a href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                        <!-- Menu toggle button for mobile -->
-                        <button class="menu-toggler" data-target=".main-navigation" style="display: none;">
+                        <button class="menu-toggler" data-target=".main-navigation"
+                            style="margin-left: auto; margin-top: -60px;">
                             <span class="fa fa-bars"></span>
                         </button>
                     </div>
+                    <!-- /.logo-box -->
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="main-navigation">
+                        <ul class="navigation-box">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="about-3.html">About</a>
+                            </li>
+                            <li class="current">
+                                <a href="brand.html">Brand</a>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
                 </div>
+                <!-- /.container -->
             </nav>
         </header><!-- /.header-one -->
-        <style>
-            .main-navigation {
-                display: none;
-                transition: all 0.3s ease-in-out;
-            }
-
-            .main-navigation.open {
-                display: block;
-            }
-
-            .main-navigation.open .navigation-box {
-                background-color: #0384CE;
-            }
-        </style>
         
-        <!-- Gallery Section (Images Only) -->
+        <!-- Gallery Section -->
         <section class="gallery-section">
             <div class="container">
                 <div class="section-title">
                     <h2>Our Products VUxx</h2>
-                    <h4>Flat 40% off on mrp</h4>
+                    <h4>Flat 40% off on MRP</h4>
                 </div>
                 
                 <div class="gallery-grid">
-                    <!-- Product Image 1 -->
+                    <!-- Product 1 - LED TV -->
                     <div class="gallery-item">
-                        <img src="images/gallery/tv.png" alt="LED TV" class="gallery-image">
+                        <div class="discount-badge">40% OFF</div>
+                        <div class="gallery-image-container">
+                            <img src="images/gallery/tv.png" alt="VUxx Smart LED TV" class="gallery-image">
+                        </div>
+                        <div class="product-pricing">
+                            <div class="product-name">VUxx 55" Smart LED TV</div>
+                            <div class="price-original">
+                                <span class="original-price">₹42,999</span>
+                            </div>
+                            <div class="price-discounted">
+                                <span class="discounted-price">₹25,799</span>
+                            </div>
+                        </div>
                     </div>
                     
-                    <!-- Product Image 2 -->
+                    <!-- Product 2 - Refrigerator -->
                     <div class="gallery-item">
-                        <img src="images/gallery/glry-1.jfif" alt="Refrigerator" class="gallery-image">
+                        <div class="discount-badge">40% OFF</div>
+                        <div class="gallery-image-container">
+                            <img src="images/gallery/glry-1.jfif" alt="VUxx Refrigerator" class="gallery-image">
+                        </div>
+                        <div class="product-pricing">
+                            <div class="product-name">VUxx 250L Refrigerator</div>
+                            <div class="price-original">
+                                <span class="original-price">₹35,999</span>
+                            </div>
+                            <div class="price-discounted">
+                                <span class="discounted-price">₹21,599</span>
+                            </div>
+                        </div>
                     </div>
                     
-                    <!-- Product Image 3 -->
+                    <!-- Product 3 - Washing Machine -->
                     <div class="gallery-item">
-                        <img src="images/gallery/glry-2.jfif" alt="Washing Machine" class="gallery-image">
+                        <div class="discount-badge">40% OFF</div>
+                        <div class="gallery-image-container">
+                            <img src="images/gallery/glry-2.jfif" alt="VUxx Washing Machine" class="gallery-image">
+                        </div>
+                        <div class="product-pricing">
+                            <div class="product-name">VUxx 8kg Washing Machine</div>
+                            <div class="price-original">
+                                <span class="original-price">₹28,499</span>
+                            </div>
+                            <div class="price-discounted">
+                                <span class="discounted-price">₹17,099</span>
+                            </div>
+                        </div>
                     </div>
                     
-                    <!-- Product Image 4 -->
+                    <!-- Product 4 - Air Conditioner -->
                     <div class="gallery-item">
-                        <img src="images/gallery/glry-3.jfif" alt="Air Conditioner" class="gallery-image">
+                        <div class="discount-badge">40% OFF</div>
+                        <div class="gallery-image-container">
+                            <img src="images/gallery/glry-3.jfif" alt="VUxx Air Conditioner" class="gallery-image">
+                        </div>
+                        <div class="product-pricing">
+                            <div class="product-name">VUxx 1.5 Ton AC</div>
+                            <div class="price-original">
+                                <span class="original-price">₹38,999</span>
+                            </div>
+                            <div class="price-discounted">
+                                <span class="discounted-price">₹23,399</span>
+                            </div>
+                        </div>
                     </div>
                     
-                    <!-- Product Image 5 -->
+                    <!-- Product 5 - Microwave Oven -->
                     <div class="gallery-item">
-                        <img src="images/gallery/glry-5.jfif" alt="Microwave Oven" class="gallery-image">
+                        <div class="discount-badge">40% OFF</div>
+                        <div class="gallery-image-container">
+                            <img src="images/gallery/glry-5.jfif" alt="VUxx Microwave Oven" class="gallery-image">
+                        </div>
+                        <div class="product-pricing">
+                            <div class="product-name">VUxx 28L Microwave</div>
+                            <div class="price-original">
+                                <span class="original-price">₹14,999</span>
+                            </div>
+                            <div class="price-discounted">
+                                <span class="discounted-price">₹8,999</span>
+                            </div>
+                        </div>
                     </div>
                     
-                    <!-- Product Image 6 -->
+                    <!-- Product 6 - Water Purifier -->
                     <div class="gallery-item">
-                        <img src="images/gallery/glry-6.jfif" alt="Water Purifier" class="gallery-image">
+                        <div class="discount-badge">40% OFF</div>
+                        <div class="gallery-image-container">
+                            <img src="images/gallery/glry-6.jfif" alt="VUxx Water Purifier" class="gallery-image">
+                        </div>
+                        <div class="product-pricing">
+                            <div class="product-name">VUxx RO Water Purifier</div>
+                            <div class="price-original">
+                                <span class="original-price">₹18,499</span>
+                            </div>
+                            <div class="price-discounted">
+                                <span class="discounted-price">₹11,099</span>
+                            </div>
+                        </div>
                     </div>
                     
-                    <!-- Product Image 7 -->
+                    <!-- Product 7 - Home Theater -->
                     <div class="gallery-item">
-                        <img src="images/gallery/glry-7jfif.jfif" alt="Home Theater" class="gallery-image">
+                        <div class="discount-badge">40% OFF</div>
+                        <div class="gallery-image-container">
+                            <img src="images/gallery/glry-7jfif.jfif" alt="VUxx Home Theater" class="gallery-image">
+                        </div>
+                        <div class="product-pricing">
+                            <div class="product-name">VUxx 5.1 Home Theater</div>
+                            <div class="price-original">
+                                <span class="original-price">₹22,999</span>
+                            </div>
+                            <div class="price-discounted">
+                                <span class="discounted-price">₹13,799</span>
+                            </div>
+                        </div>
                     </div>
                     
-                    <!-- Product Image 8 -->
+                    <!-- Product 8 - Vacuum Cleaner -->
                     <div class="gallery-item">
-                        <img src="images/gallery/glry-8.jfif" alt="Vacuum Cleaner" class="gallery-image">
+                        <div class="discount-badge">40% OFF</div>
+                        <div class="gallery-image-container">
+                            <img src="images/gallery/glry-8.jfif" alt="VUxx Vacuum Cleaner" class="gallery-image">
+                        </div>
+                        <div class="product-pricing">
+                            <div class="product-name">VUxx Vacuum Cleaner</div>
+                            <div class="price-original">
+                                <span class="original-price">₹12,999</span>
+                            </div>
+                            <div class="price-discounted">
+                                <span class="discounted-price">₹7,799</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -394,7 +577,13 @@
             var target = $(this).data('target');
             $(target).toggleClass('open');
         });
+        
+        // Add to cart functionality (optional)
+        $('.gallery-item').click(function() {
+            var productName = $(this).find('.product-name').text();
+            var discountedPrice = $(this).find('.discounted-price').text();
+            alert('Added to cart: ' + productName + ' - ' + discountedPrice);
+        });
     </script>
 </body>
-
 </html>
