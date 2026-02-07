@@ -164,11 +164,228 @@
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
         }
         
+        /* Product Detail Section */
+        .product-detail-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+        
+        .product-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .product-detail-header {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8e53 100%);
+            padding: 40px;
+            color: white;
+            text-align: center;
+        }
+        
+        .product-detail-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .product-detail-header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .product-detail-content {
+            padding: 40px;
+        }
+        
+        .product-overview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .product-image-container {
+            text-align: center;
+        }
+        
+        .product-main-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-specs {
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .specs-title {
+            color: #ff6b35;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .specs-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .specs-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eaeaea;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .specs-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .spec-label {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .spec-value {
+            color: #555;
+        }
+        
+        .features-section, .uses-section, .benefits-section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .section-heading {
+            color: #ff6b35;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-heading:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: #ff6b35;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            color: #ff6b35;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .uses-list, .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .uses-list li, .benefits-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eaeaea;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .uses-list li:last-child, .benefits-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .use-icon, .benefit-icon {
+            color: #ff6b35;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        
+        .pricing-box {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8e53 100%);
+            padding: 30px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .current-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .original-price-large {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #ff6b35;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            background: #f8f9fa;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
         /* Responsive adjustments */
         @media (max-width: 1200px) {
             .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 25px;
+            }
+            
+            .product-overview {
+                gap: 30px;
             }
         }
         
@@ -180,6 +397,14 @@
             
             .gallery-image-container {
                 height: 220px;
+            }
+            
+            .product-overview {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -208,6 +433,18 @@
             .original-price {
                 font-size: 1rem;
             }
+            
+            .product-detail-header {
+                padding: 30px 20px;
+            }
+            
+            .product-detail-header h1 {
+                font-size: 2rem;
+            }
+            
+            .product-detail-content {
+                padding: 20px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -225,6 +462,14 @@
             .discount-badge {
                 font-size: 0.8rem;
                 padding: 5px 10px;
+            }
+            
+            .product-detail-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .current-price {
+                font-size: 2rem;
             }
         }
         
@@ -334,173 +579,284 @@
             </nav>
         </header><!-- /.header-one -->
         
-        <!-- Gallery Section -->
-     <!-- About VUXX Brand Section -->
-<section class="about-vuxx">
-    <div class="container">
-        <div class="section-title">
-            <h2>About VUXX Brand</h2>
-            <h4>Smart Technology. Trusted Performance.</h4>
-        </div>
-
-        <div class="row align-items-center">
-            <!-- Left Content -->
-            <div class="col-lg-6 col-md-12">
-                <h3 class="about-vuxx__title">
-                    Why Choose VUXX?
-                </h3>
-
-                <p class="about-vuxx__text">
-                    VUXX is a modern and reliable home appliance brand focused on delivering
-                    high-quality Smart TVs and appliances at affordable prices.
-                    Designed for Indian homes, VUXX products combine advanced technology,
-                    energy efficiency, and stylish design.
-                </p>
-
-                <p class="about-vuxx__text">
-                    At Unique Electricals, we are an authorized VUXX partner providing
-                    genuine products, professional installation, and dependable
-                    after-sales service in Old Town, Bhubaneswar.
-                </p>
-
-                <ul class="about-vuxx__features">
-                    <li>✔ Genuine VUXX Products</li>
-                    <li>✔ Expert Installation Support</li>
-                    <li>✔ Affordable Pricing</li>
-                    <li>✔ Fast Service & Local Support</li>
-                </ul>
-
-                <a href="tel:9178134139" class="about-vuxx__call-btn">
-                    📞 Call Now: +91 91781 34139
-                </a>
-            </div>
-
-            <!-- Right Content -->
-            <div class="col-lg-6 col-md-12">
-                <div class="about-vuxx__box">
-                    <h4>VUXX Smart TV Sizes & Offers</h4>
-
-                    <table class="about-vuxx__table">
-                        <tr>
-                            <th>TV Size</th>
-                            <th>Type</th>
-                            <th>Offer Price</th>
-                        </tr>
-                        <tr>
-                            <td>24 Inch</td>
-                            <td>Full HD</td>
-                            <td>₹11,500</td>
-                        </tr>
-                        <tr>
-                            <td>24 Inch</td>
-                            <td>Smart TV</td>
-                            <td>₹12,500</td>
-                        </tr>
-                        <tr>
-                            <td>32 Inch</td>
-                            <td>Smart TV</td>
-                            <td>₹16,000</td>
-                        </tr>
-                        <tr>
-                            <td>43 Inch</td>
-                            <td>Smart LED</td>
-                            <td>Best Offer Available</td>
-                        </tr>
-                    </table>
-
-                    <p class="about-vuxx__note">
-                        *Prices may vary based on stock & offers. Installation support included.
-                    </p>
+        <!-- VUXX 24" Full HD TV Product Detail Section -->
+        <section class="product-detail-section">
+            <div class="container">
+                <div class="product-detail-container">
+                    <div class="product-detail-header">
+                        <h1>VUXX 24" Full HD LED TV</h1>
+                        <p class="subtitle">Experience Crystal Clear Visuals with Smart Performance</p>
+                    </div>
+                    
+                    <div class="product-detail-content">
+                        <!-- Product Overview -->
+                        <div class="product-overview">
+                            <div class="product-image-container">
+                                <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                     alt="VUXX 24 Inch Full HD TV" class="product-main-image">
+                            </div>
+                            
+                            <div class="product-specs">
+                                <h3 class="specs-title">Technical Specifications</h3>
+                                <ul class="specs-list">
+                                    <li>
+                                        <span class="spec-label">Screen Size:</span>
+                                        <span class="spec-value">24 Inches (60.96 cm)</span>
+                                    </li>
+                                    <li>
+                                        <span class="spec-label">Resolution:</span>
+                                        <span class="spec-value">Full HD (1920 x 1080p)</span>
+                                    </li>
+                                    <li>
+                                        <span class="spec-label">Display Type:</span>
+                                        <span class="spec-value">LED Backlit</span>
+                                    </li>
+                                    <li>
+                                        <span class="spec-label">Refresh Rate:</span>
+                                        <span class="spec-value">60Hz</span>
+                                    </li>
+                                    <li>
+                                        <span class="spec-label">Aspect Ratio:</span>
+                                        <span class="spec-value">16:9</span>
+                                    </li>
+                                    <li>
+                                        <span class="spec-label">Connectivity:</span>
+                                        <span class="spec-value">HDMI x2, USB x2, VGA, AV Input</span>
+                                    </li>
+                                    <li>
+                                        <span class="spec-label">Sound Output:</span>
+                                        <span class="spec-value">20W Stereo Speakers</span>
+                                    </li>
+                                    <li>
+                                        <span class="spec-label">Power Consumption:</span>
+                                        <span class="spec-value">35W (Energy Star Certified)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Key Features -->
+                        <div class="features-section">
+                            <h2 class="section-heading">Key Features</h2>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-tv"></i>
+                                    </div>
+                                    <h3 class="feature-title">Full HD Resolution</h3>
+                                    <p>1920 x 1080p resolution delivers crisp, detailed images with vibrant colors and sharp contrast.</p>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-palette"></i>
+                                    </div>
+                                    <h3 class="feature-title">Advanced Color Technology</h3>
+                                    <p>Dynamic color enhancement with millions of color combinations for natural and vivid picture quality.</p>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-volume-up"></i>
+                                    </div>
+                                    <h3 class="feature-title">Dolby Audio</h3>
+                                    <p>Enhanced audio experience with clear dialogue, rich bass, and immersive surround sound.</p>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <h3 class="feature-title">Energy Efficient</h3>
+                                    <p>Low power consumption (35W) makes it eco-friendly and reduces electricity bills significantly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Primary Uses -->
+                        <div class="uses-section">
+                            <h2 class="section-heading">Primary Uses & Applications</h2>
+                            <ul class="uses-list">
+                                <li>
+                                    <span class="use-icon">🏠</span>
+                                    <div>
+                                        <strong>Bedroom Entertainment</strong>
+                                        <p>Perfect size for bedroom viewing with excellent picture quality for movies, TV shows, and late-night viewing.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="use-icon">👨‍💻</span>
+                                    <div>
+                                        <strong>Gaming Console Display</strong>
+                                        <p>Low input lag and Full HD resolution provide smooth gaming experience with PlayStation, Xbox, or Nintendo Switch.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="use-icon">🍿</span>
+                                    <div>
+                                        <strong>Personal Media Center</strong>
+                                        <p>Connect streaming devices (Fire Stick, Chromecast) for Netflix, Amazon Prime, Disney+ Hotstar, and YouTube.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="use-icon">🖥️</span>
+                                    <div>
+                                        <strong>Monitor Alternative</strong>
+                                        <p>Use as a computer monitor for work-from-home setup, offering larger screen real estate than typical monitors.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="use-icon">🎶</span>
+                                    <div>
+                                        <strong>Kitchen/Living Room Secondary TV</strong>
+                                        <p>Compact size fits in smaller spaces while providing quality entertainment during cooking or casual viewing.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Benefits -->
+                        <div class="benefits-section">
+                            <h2 class="section-heading">Why Choose VUXX 24" Full HD TV?</h2>
+                            <ul class="benefits-list">
+                                <li>
+                                    <span class="benefit-icon">✅</span>
+                                    <div>
+                                        <strong>Space-Saving Design</strong>
+                                        <p>Compact footprint makes it ideal for small rooms, dormitories, RVs, and apartments where space is limited.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="benefit-icon">✅</span>
+                                    <div>
+                                        <strong>Easy Connectivity</strong>
+                                        <p>Multiple ports (HDMI, USB, VGA) allow connection with gaming consoles, laptops, set-top boxes, and USB drives.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="benefit-icon">✅</span>
+                                    <div>
+                                        <strong>Eye Comfort Technology</strong>
+                                        <p>Blue light reduction and flicker-free technology reduce eye strain during extended viewing sessions.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="benefit-icon">✅</span>
+                                    <div>
+                                        <strong>Wall Mount Ready</strong>
+                                        <p>VESA compatible (100x100mm) for easy wall mounting to save desk or table space.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="benefit-icon">✅</span>
+                                    <div>
+                                        <strong>Value for Money</strong>
+                                        <p>Premium features at an affordable price point with VUXX's reputation for quality and durability.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Pricing & CTA -->
+                        <div class="pricing-box">
+                            <div class="original-price-large">₹13,999</div>
+                            <div class="current-price">₹11,500 Only</div>
+                            <p>Inclusive of GST | Free Installation in Bhubaneswar</p>
+                            <p>🛡️ 2 Years Warranty | 🚚 Same Day Delivery Available</p>
+                            <a href="tel:9178134139" class="cta-button">
+                                <i class="fas fa-phone-alt"></i> Call Now to Order
+                            </a>
+                            <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.9;">
+                                📍 Available at: Unique Electricals, Old Town, Bhubaneswar
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<style>
-    .about-vuxx {
-    padding: 70px 0;
-    background: #ffffff;
-}
+        </section>
+        
+        <!-- Gallery Section -->
+        <!-- About VUXX Brand Section -->
+        <section class="about-vuxx">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About VUXX Brand</h2>
+                    <h4>Smart Technology. Trusted Performance.</h4>
+                </div>
 
-.about-vuxx__title {
-    font-size: 1.9rem;
-    color: #333;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
+                <div class="row align-items-center">
+                    <!-- Left Content -->
+                    <div class="col-lg-6 col-md-12">
+                        <h3 class="about-vuxx__title">
+                            Why Choose VUXX?
+                        </h3>
 
-.about-vuxx__text {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px;
-    line-height: 1.7;
-}
+                        <p class="about-vuxx__text">
+                            VUXX is a modern and reliable home appliance brand focused on delivering
+                            high-quality Smart TVs and appliances at affordable prices.
+                            Designed for Indian homes, VUXX products combine advanced technology,
+                            energy efficiency, and stylish design.
+                        </p>
 
-.about-vuxx__features {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
+                        <p class="about-vuxx__text">
+                            At Unique Electricals, we are an authorized VUXX partner providing
+                            genuine products, professional installation, and dependable
+                            after-sales service in Old Town, Bhubaneswar.
+                        </p>
 
-.about-vuxx__features li {
-    font-size: 1rem;
-    margin-bottom: 8px;
-    color: #333;
-}
+                        <ul class="about-vuxx__features">
+                            <li>✔ Genuine VUXX Products</li>
+                            <li>✔ Expert Installation Support</li>
+                            <li>✔ Affordable Pricing</li>
+                            <li>✔ Fast Service & Local Support</li>
+                        </ul>
 
-.about-vuxx__call-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    background: #ff6b35;
-    color: #fff;
-    font-weight: 600;
-    border-radius: 6px;
-    text-decoration: none;
-}
+                        <a href="tel:9178134139" class="about-vuxx__call-btn">
+                            📞 Call Now: +91 91781 34139
+                        </a>
+                    </div>
 
-.about-vuxx__call-btn:hover {
-    background: #e65a28;
-}
+                    <!-- Right Content -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-vuxx__box">
+                            <h4>VUXX Smart TV Sizes & Offers</h4>
 
-.about-vuxx__box {
-    background: #f8f9fa;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
+                            <table class="about-vuxx__table">
+                                <tr>
+                                    <th>TV Size</th>
+                                    <th>Type</th>
+                                    <th>Offer Price</th>
+                                </tr>
+                                <tr>
+                                    <td>24 Inch</td>
+                                    <td>Full HD</td>
+                                    <td>₹11,500</td>
+                                </tr>
+                                <tr>
+                                    <td>24 Inch</td>
+                                    <td>Smart TV</td>
+                                    <td>₹12,500</td>
+                                </tr>
+                                <tr>
+                                    <td>32 Inch</td>
+                                    <td>Smart TV</td>
+                                    <td>₹16,000</td>
+                                </tr>
+                                <tr>
+                                    <td>43 Inch</td>
+                                    <td>Smart LED</td>
+                                    <td>Best Offer Available</td>
+                                </tr>
+                            </table>
 
-.about-vuxx__box h4 {
-    margin-bottom: 15px;
-    font-weight: 700;
-    color: #333;
-}
-
-.about-vuxx__table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.about-vuxx__table th,
-.about-vuxx__table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    font-size: 0.95rem;
-}
-
-.about-vuxx__table th {
-    background: #ff6b35;
-    color: #fff;
-}
-
-.about-vuxx__note {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #777;
-}
-
-</style>
+                            <p class="about-vuxx__note">
+                                *Prices may vary based on stock & offers. Installation support included.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- Footer -->
         <footer class="footer-one">
@@ -603,6 +959,17 @@
             var productName = $(this).find('.product-name').text();
             var discountedPrice = $(this).find('.discounted-price').text();
             alert('Added to cart: ' + productName + ' - ' + discountedPrice);
+        });
+        
+        // Smooth scroll for internal links
+        $('a[href^="#"]').on('click', function(e) {
+            e.preventDefault();
+            var target = $(this.getAttribute('href'));
+            if(target.length) {
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
         });
     </script>
 </body>
