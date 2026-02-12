@@ -4,1176 +4,1205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Unique Electronics</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="images/favicon/manifest.json">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <link href="https://cdn.materialdesignicons.com/7.0.96/css/materialdesignicons.min.css" rel="stylesheet">
+    <title>VUXX India</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            width: 100%;
+            background: #ffffff;
+            padding: 18px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #20D34A;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            color: #d50000;
+        }
+
+        /* ================= HERO SECTION ================= */
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        /* Slider container */
+        .slider {
+            display: flex;
+            width: 300%;
+            height: 80%;
+            transition: 0.7s ease;
+        }
+
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        /* Background image */
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Text on left */
+        .hero-text {
+            position: absolute;
+            left: 80px;
+            bottom: 100px;
+            font-size: 60px;
+            font-weight: bold;
+            color: #d50000;
+            letter-spacing: 3px;
+        }
+
+        /* Arrow buttons */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 40px;
+            color: white;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 18px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .arrow-left {
+            left: 20px;
+        }
+
+        .arrow-right {
+            right: 20px;
+        }
+
+        .arrow:hover {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width:768px) {
+            .hero-text {
+                font-size: 35px;
+                left: 30px;
+                bottom: 50px;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+        }
+
+        /* ================= ABOUT SECTION ================= */
+
+        .about-section {
+            background: #f2f2f2;
+            padding: 80px 8%;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            margin-top: 20px;
+            list-style: none;
+        }
+
+        .about-list li {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 500px;
+            border: 10px solid #ddd;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* ================= PROMISE SECTION ================= */
+
+        .promise-section {
+            background: #eaeaea;
+            padding: 40px 8%;
+        }
+
+        .promise-container h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .promise-container p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .perfect-for {
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+
+        /* ================= CTA SECTION ================= */
+
+        .cta-section {
+            background: url('https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+            height: 350px;
+            position: relative;
+        }
+
+        .cta-overlay {
+            background: rgba(0, 0, 0, 0.75);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-overlay h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            padding: 12px 28px;
+            border: 2px solid #20D34A;
+            background: transparent;
+            color: #20D34A;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #20D34A;
+            color: white;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width:900px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image {
+                text-align: center;
+            }
+        }
+
+        /* ================= PRODUCTS SECTION ================= */
+
+        .products-section {
+            background: #f5f5f5;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .products-title h2 {
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .underline {
+            width: 60px;
+            height: 3px;
+            background: #e60000;
+
+            margin: 10px auto 40px;
+        }
+
+        .products-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            background: #ffffff;
+            width: 23%;
+            padding: 30px 20px;
+            border: 1px solid #ddd;
+            transition: 0.3s;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .red-text {
+            color: #e60000;
+            margin: 8px 0;
+        }
+
+        .mrp {
+            color: #e60000;
+            margin: 8px 0;
+        }
+
+        .mrp span {
+            text-decoration: line-through;
+        }
+
+        .book-btn {
+            margin-top: 15px;
+            background: #e60000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .book-btn:hover {
+            background: #c40000;
+        }
+
+        /* Highlighted product like screenshot */
+        .product-card.active {
+            border: 2px solid #e60000;
+        }
+
+        /* Responsive */
+        @media(max-width:1000px) {
+            .product-card {
+                width: 48%;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media(max-width:600px) {
+            .product-card {
+                width: 100%;
+            }
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: #eef1f6;
+            padding: 80px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .faq-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-title span {
+            width: 4px;
+            height: 25px;
+            background: red;
+            display: inline-block;
+        }
+
+        /* FAQ Box */
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 18px 20px;
+            background: #f3f3f3;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            text-align: left;
+            border-radius: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: #e8e8e8;
+        }
+
+        .icon {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Answer */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: #ffffff;
+            padding: 0 20px;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .faq-answer p {
+            padding: 15px 0;
+            margin: 0;
+        }
+
+        /* Scroll To Top */
+        #scrollTopBtn {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: #e9e8c4;
+            /* Light cream */
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+        }
+
+        /* Title */
+        .contact-title {
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .title-underline {
+            width: 60px;
+            height: 3px;
+            background: #e60000;
+            margin: 10px auto 50px auto;
+        }
+
+        /* Contact Boxes */
+        .contact-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .contact-box {
+            flex: 1;
+            padding: 50px 20px;
+            border: 2px dotted #e60000;
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        .contact-box:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Icons */
+        .contact-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-box p {
+            font-size: 16px;
+            font-weight: 500;
+            color: #111;
+        }
+
+        @media(max-width: 768px) {
+            .contact-wrapper {
+                flex-direction: column;
+            }
+        }
+
+        /* Location Section */
+        .location-section {
+            padding: 60px 0;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .location-title {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .location-underline {
+            width: 60px;
+            height: 3px;
+            background: #e60000;
+            margin: 10px auto 40px auto;
+        }
+
+        .map-container {
+            width: 100%;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            display: block;
+        }
+
+        /* Footer Section */
+        .footer-section {
+            background: #000;
+            color: #fff;
+            padding: 70px 0 20px;
+        }
+
+        .footer-container {
+            width: 85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        /* Columns */
+        .footer-col {
+            flex: 1;
+        }
+
+        /* Logo */
+        .footer-logo {
+            font-size: 30px;
+            color: #e60000;
+        }
+
+        .footer-logo span {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        /* Description */
+        .footer-col p {
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Links */
+        .footer-col h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #e60000;
+        }
+
+        /* Social Icons */
+        .social-icons a {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background: #e60000;
+            color: #fff;
+            text-align: center;
+            line-height: 45px;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #fff;
+            color: #e60000;
+        }
+
+        /* Bottom */
+        .footer-section hr {
+            margin: 40px auto 20px;
+            width: 85%;
+            border: 0.5px solid #444;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .highlight {
+            color: #e60000;
+        }
+
+        /* Scroll To Top */
+        #scrollTopBtn {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            background: #e60000;
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="preloader">
-        <div class="spinner"></div>
-    </div><!-- /.preloader -->
-    <div class="page-wrapper">
-        <section class="topbar-one">
-            <div class="container">
-                <ul class="topbar-one__contact">
-                    <li class="topbar-one__contact-item"><a href="mailto:Rrockstarr999@gmail.com"><i
-                                class="material-icons">email</i> Rrockstarr999@gmail.com</a></li>
-                    <li class="topbar-one__contact-item"><a href="tel:9178134139"><i
-                                class="material-icons">local_phone</i>9178134139</a></li>
-                </ul><!-- /.topbar-one__contact -->
-                <div class="topbar-one__buttons">
-                    <a href="contact.html" class="topbar-one__btn">Get in Touch</a>
-                </div><!-- /.topbar-one__buttons -->
-            </div><!-- /.container -->
-        </section><!-- /.topbar-one -->
-        <header class="site-header header-one">
-            <nav class="navbar navbar-expand-lg navbar-light header-navigation stricky">
-                <div class="container clearfix">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="logo-box clearfix">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="images/resources/el-logo.png" alt="Awesome Image"
-                                style="height:135px; width:auto;" />
 
-                        </a>
-                        <button class="menu-toggler" data-target=".main-navigation"
-                            style="margin-left: auto; margin-top: -60px;">
-                            <span class="fa fa-bars"></span>
-                        </button>
-                    </div>
-                    <!-- /.logo-box -->
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="main-navigation">
-                        <ul class=" navigation-box">
-                            <li class="current">
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="about-3.html">About</a>
-                            </li>
-                            <li>
-                                <a href="brand.html">Brand</a>
-                            </li>
-                            <!-- <li>
-                                <a href="doctors.html">Doctor</a>
-                            </li> -->
-                            <!-- <li>
-                                <a href="gallery.html">Team</a>
-
-                            </li> -->
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div>
-                <!-- /.container -->
-            </nav>
-        </header><!-- /.header-one -->
-        <style>
-            .main-navigation {
-                display: none;
-                transition: all 0.3s ease-in-out;
-            }
-
-            .main-navigation.open {
-                display: block;
-            }
-
-            .main-navigation.open .navigation-box {
-                background-color: #0384CE;
-            }
-        </style>
-
-        <!-- Main Content -->
-        <div class="banner-wrapper">
-            <section class="banner-one banner-carousel__one no-dots owl-theme owl-carousel">
-                <div class="banner-one__slide banner-one__slide-one"
-                    style="background-image: url(images/slider/slider1-E.png);">
-                    <div class="container">
-                        <img src="images/slider/img-1-removebg-preview.png" alt="Awesome Image"
-                            class="banner-one__person" />
-                        <div class="row no-gutters">
-                            <div class="col-lg-6">
-                                <h3 class="banner-one__title banner-one__light-color">
-                                    VUXX <br>
-                                    Smart TVs & Home Appliances at Affordable Prices.
-                                </h3><!-- /.banner-one__title -->
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="logo">VUXX<span> INDIA</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#product">PRODUCTS</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 20D34A
+676767 -->
 
 
-                                <p class="banner-one__text banner-one__light-color">
-                                    We bring you quality VUxx LED TVs, washing machines, and refrigerators with
-                                    easy buying, professional installation, and reliable service to make your
-                                    home more comfortable.
-                                </p>
-                                <!-- /.banner-one__text -->
-                            </div><!-- /.col-lg-6 -->
-                        </div><!-- /.row -->
-                    </div><!-- /.container -->
-                </div><!-- /.banner-one__slide -->
+    <!-- ================= HERO SLIDER ================= -->
+    <!-- HERO SLIDER SECTION -->
+    <!-- COMPLETE SLIDER SECTION - AUTOMATIC IMAGE FIT -->
+    <section id="home" style="position:relative; width:100%; height:90vh; overflow:hidden;">
 
-                <div class="banner-one__slide banner-one__slide-two"
-                    style="background-image: url(images/slider/slider1-E.png);">
-                    <div class="container">
-                        <img src="images/slider/Untitled_design-removebg-preview.png" alt="Awesome Image"
-                            class="banner-one__person" />
-                        <div class="row no-gutters">
-                            <div class="col-lg-6">
-                                <h3 class="banner-one__title banner-one__light-color">
-                                    Trusted Store in Old Town, <br>
-                                    Bhubaneswar for Sales, Service & Installation
-                                </h3><!-- /.banner-one__title -->
+        <!-- SLIDER CONTAINER -->
+        <div style="display:flex; width:300%; height:100%; animation: slideShow 12s infinite ease-in-out;">
 
-
-                                <p class="banner-one__text banner-one__light-color">
-                                    Welcome to Unique Electronics, your trusted destination for VUxx LED TVs,
-                                    washing machines, and refrigerators. We offer quality products, professional
-                                    installation, and dependable service to ensure a smooth and worry-free
-                                    experience for your home.
-                                </p>
-                                <!-- /.banner-one__text -->
-                            </div><!-- /.col-lg-6 -->
-                        </div><!-- /.row -->
-                    </div><!-- /.container -->
-                </div><!-- /.banner-one__slide -->
-            </section><!-- /.banner-one -->
-
-            <div class="carousel-btn-block banner-carousel-btn">
-                <span class="carousel-btn left-btn"><i class="fa fa-angle-left"></i></span>
-                <span class="carousel-btn right-btn"><i class="fa fa-angle-right"></i></span>
-            </div><!-- /.carousel-btn-block banner-carousel-btn -->
-        </div><!-- /.banner-wrapper -->
-
-        <!-- Rest of your content remains exactly the same -->
-        <section class="appointment-one">
-            <div class="container">
-                <!-- /.inner-container -->
-            </div><!-- /.container -->
-        </section><!-- /.appointment-one -->
-
-        <section class="about-one">
-            <div class="container-fluid">
-                <div class="row no-gutters">
-                    <div class="col-lg-6">
-                        <div class="about-one__content-block">
-                            <h3 class="about-one__title">Welcome to VUXX at Unique Electronics</h3>
-                            <!-- /.about-one__title -->
-
-                            <p class="about-one__tag-line">Smart Technology. Trusted Local Service.</p>
-                            <!-- /.about-one__tag-line -->
-
-                            <p class="about-one__text">
-                                Welcome to Unique Electronics, your trusted VUXX brand partner located at
-                                Old Town, Kapileswar, Bhubaneswar. We specialize in VUXX Smart LED TVs,
-                                washing machines, and refrigerators, delivering genuine VUXX products
-                                designed for modern homes.
-                            </p><!-- /.about-one__text -->
-
-                            <p class="about-one__text">
-                                Along with authentic VUXX products, we provide professional installation,
-                                reliable service support, and complete customer assistance to ensure a
-                                smooth and worry-free experience from purchase to after-sales service.
-                            </p>
-                            <!-- /.about-one__text -->
-
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <ul class="about-one__features">
-                                        <li class="about-one__features-item">Genuine VUXX Products</li>
-                                        <li class="about-one__features-item">Expert Installation</li>
-                                    </ul><!-- /.about-one__features -->
-                                </div><!-- /.col-lg-6 -->
-
-                                <div class="col-lg-6">
-                                    <ul class="about-one__features">
-                                        <li class="about-one__features-item">Authorized Service Support</li>
-                                        <li class="about-one__features-item">Affordable Pricing</li>
-                                    </ul><!-- /.about-one__features -->
-                                </div><!-- /.col-lg-6 -->
-                            </div><!-- /.row -->
-                        </div><!-- /.about-one__content-block -->
-                    </div><!-- /.col-lg-6 -->
-
-                    <div class="col-lg-6">
-                        <div class="about-one__image-wrap wow fadeInRight" data-wow-duration="1s">
-                            <div class="row no-gutters">
-                                <div class="col-lg-7 col-md-7 col-sm-7">
-                                    <div class="about-one__image">
-                                        <img src="images/gallery/fri2.jfif" alt="VUXX Refrigerator" />
-                                    </div><!-- /.about-one__image -->
-                                </div><!-- /.col-lg-7 -->
-                                <div class="col-lg-5 col-md-5 col-sm-5">
-                                    <div class="about-one__image">
-                                        <img src="images/gallery/glry-6.jfif" alt="VUXX LED TV" />
-                                    </div><!-- /.about-one__image -->
-                                    <div class="about-one__image">
-                                        <img src="images/gallery/fri5.jfif" alt="VUXX Home Appliances" />
-                                    </div><!-- /.about-one__image -->
-                                </div><!-- /.col-lg-5 -->
-                            </div><!-- /.row -->
-                        </div><!-- /.about-one__image-wrap -->
-                    </div><!-- /.col-lg-6 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.about-one -->
-
-        <!-- <section class="service-one thm-gray-bg">
-            <div class="container">
-                <div class="block-title text-center">
-                    <h2 class="block-title__title">Our Products</h2>
-                    <p class="block-title__text">
-                        Explore our range of high-quality home appliances designed for comfort,
-                        efficiency, and everyday use. <br>
-                        We offer reliable products backed by trusted service and support.
+            <!-- SLIDE 1 -->
+            <div style="position:relative; min-width:33.333%; height:100%; overflow:hidden;">
+                <img src="images/resources/banner5.png"
+                    style="width:100%; height:100%; object-fit:cover; object-position:center;">
+                <div style="position:absolute; top:0; left:0; width:100%; height:100%;
+                        background:rgba(0,0,0,0.5);
+                        display:flex; flex-direction:column; justify-content:center; align-items:center;">
+                    <h1 style="color:#e60000; font-size:clamp(30px, 8vw, 70px); font-weight:900;
+                           letter-spacing:5px; text-shadow:2px 2px 10px black; margin-bottom:15px;
+                           text-align:center;">
+                        VUXX INDIA
+                    </h1>
+                    <p style="color:white; font-size:clamp(16px, 4vw, 24px); letter-spacing:3px;
+                          text-shadow:2px 2px 8px black; text-align:center;">
+                        Buy,Installation & Services
                     </p>
                 </div>
+            </div>
 
-                <div class="row">
-                    <style>
-                        .center-container {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            min-height: 60vh;
-                            padding: 20px 0;
-                        }
-
-                        .category-boxes {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 20px;
-                            flex-wrap: wrap;
-                        }
-
-                        .category-box {
-                            width: 300px;
-                            height: 200px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            border-radius: 15px;
-                            overflow: hidden;
-                            cursor: pointer;
-                            position: relative;
-                            transition: transform 0.3s, box-shadow 0.3s;
-                            background-size: cover;
-                            background-position: center;
-                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                        }
-
-                        .category-box:hover {
-                            transform: scale(1.05);
-                            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-                        }
-
-                        .category-box::before {
-                            content: "";
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            background: rgba(0, 0, 0, 0.4);
-                            z-index: 1;
-                        }
-
-                        .category-box span {
-                            position: relative;
-                            color: white;
-                            font-size: 18px;
-                            font-weight: bold;
-                            z-index: 2;
-                            text-align: center;
-                            padding: 10px;
-                        }
-
-                        .category-box a {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            width: 100%;
-                            height: 100%;
-                            text-decoration: none;
-                        }
-
-                        .hospital {
-                            background-image: url('images/resources/tv.png');
-                        }
-
-                        .events {
-                            background-image: url('images/resources/fridge.png');
-                        }
-
-                        .festivals {
-                            background-image: url('images/resources/washing-mechine.png');
-                        }
-                    </style>
-                    
-                    <div class="center-container">
-                        <div class="category-boxes">
-                            <div class="category-box hospital">
-                                <a href="tv.html">
-                                    <span>VUxx LED TV <br> Click here to explore more</span>
-                                </a>
-                            </div>
-                            <div class="category-box events">
-                                <a href="fridge.html">
-                                    <span>Fridge <br> Click here to explore more</span>
-                                </a>
-                            </div>
-                            <div class="category-box festivals">
-                                <a href="washingmechine.html">
-                                    <span>Washing Machine <br> Click here to explore more</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <!-- SLIDE 2 -->
+            <div style="position:relative; min-width:33.333%; height:100%; overflow:hidden;">
+                <img src="images/resources/slider3.png"
+                    style="width:100%; height:100%; object-fit:cover; object-position:center;">
+                <div style="position:absolute; top:0; left:0; width:100%; height:100%;
+                        background:rgba(0,0,0,0.5);
+                        display:flex; flex-direction:column; justify-content:center; align-items:center;">
+                    <h1 style="color:#e60000; font-size:clamp(30px, 8vw, 70px); font-weight:900;
+                           letter-spacing:5px; text-shadow:2px 2px 10px black; margin-bottom:15px;
+                           text-align:center;">
+                        Smart LED TVs
+                    </h1>
+                    <p style="color:white; font-size:clamp(16px, 4vw, 24px); letter-spacing:3px;
+                          text-shadow:2px 2px 8px black; text-align:center;">
+                        4K Ultra HD | Smart Features
+                    </p>
                 </div>
             </div>
-        </section> -->
 
-        <section class="gallery-section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Our Products VUxx</h2>
-            <h4>Flat 40% off on MRP</h4>
+            <!-- SLIDE 3 -->
+            <div style="position:relative; min-width:33.333%; height:100%; overflow:hidden;">
+                <img src="images/resources/slider2.png"
+                    style="width:100%; height:100%; object-fit:cover; object-position:center;">
+                <div style="position:absolute; top:0; left:0; width:100%; height:100%;
+                        background:rgba(0,0,0,0.5);
+                        display:flex; flex-direction:column; justify-content:center; align-items:center;">
+                    <h1 style="color:#e60000; font-size:clamp(30px, 8vw, 70px); font-weight:900;
+                           letter-spacing:5px; text-shadow:2px 2px 10px black; margin-bottom:15px;
+                           text-align:center;">
+                        Flat 40% OFF
+                    </h1>
+                    <p style="color:white; font-size:clamp(16px, 4vw, 24px); letter-spacing:3px;
+                          text-shadow:2px 2px 8px black; text-align:center;">
+                        Limited Period Offer
+                    </p>
+                </div>
+            </div>
+
         </div>
 
-        <div class="gallery-grid">
+        <!-- SLIDER DOTS (INDICATOR) -->
+        <div style="position:absolute; bottom:30px; left:50%; transform:translateX(-50%);
+                display:flex; gap:15px; z-index:10;">
+            <span style="width:12px; height:12px; border-radius:50%; background:#e60000; cursor:pointer;"></span>
+            <span
+                style="width:12px; height:12px; border-radius:50%; background:rgba(255,255,255,0.5); cursor:pointer;"></span>
+            <span
+                style="width:12px; height:12px; border-radius:50%; background:rgba(255,255,255,0.5); cursor:pointer;"></span>
+        </div>
 
-            <!-- Product 1 -->
-            <div class="gallery-item">
-                <div class="discount-badge">40% OFF</div>
+    </section>
 
-                <div class="gallery-image-container">
-                    <a href="tv.html">
-                        <img src="images/gallery/tv.png" alt="VUxx Smart LED TV" class="gallery-image">
-                    </a>
-                </div>
+    <!-- SLIDER ANIMATION -->
+    <style>
+        @keyframes slideShow {
 
-                <div class="product-pricing">
-                    <div class="product-name">Flat 40% Off on MRP</div>
-                    <div class="price-original">
-                        <span class="original-price">₹19,167</span>
-                    </div>
-                    <div class="price-discounted">
-                        <span class="discounted-price">₹11,500</span>
-                    </div>
-                </div>
+            0%,
+            25% {
+                transform: translateX(0);
+            }
 
-                <a href="tel:9178134139" class="call-now">📞 Call Now: 9178134139</a>
+            33.33%,
+            58.33% {
+                transform: translateX(-33.333%);
+            }
+
+            66.66%,
+            91.66% {
+                transform: translateX(-66.666%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Make images perfect fit on all devices */
+        section img {
+            transition: transform 0.5s ease;
+        }
+
+        section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive height for mobile */
+        @media (max-width:768px) {
+            section {
+                height: 60vh;
+            }
+        }
+    </style>
+
+
+    <!-- SLIDER ANIMATION -->
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="about-section">
+
+        <div class="about-container">
+
+            <!-- Left Content -->
+            <div class="about-text">
+                <h2>ABOUT VUXX INDIA</h2>
+
+                <p>
+                    Crown India LED TV represents the perfect blend of advanced technology,
+                    innovative design, and superior performance. Unlike ordinary brands
+                    available in the market, Crown India stands completely apart by offering
+                    exclusive products that are not found anywhere else.
+                </p>
+
+                <p>
+                    Each Crown India LED TV is carefully manufactured to meet modern
+                    consumer expectations, delivering exceptional picture quality,
+                    powerful sound, and long-lasting durability.
+                    Our products are designed with a single goal – complete customer satisfaction.
+                </p>
+
+                <ul class="about-list">
+                    <li>Why Choose Crown India?</li>
+                    <li>Advanced & modern LED TV technology</li>
+                    <li>Unique product range not available in the open market</li>
+                    <li>Premium build quality & reliable performance</li>
+                    <li>Designed for comfort, clarity, and entertainment</li>
+                </ul>
             </div>
 
-            <!-- Product 2 -->
-            <div class="gallery-item">
-                <div class="discount-badge">40% OFF</div>
+            <!-- Right Image -->
+            <div class="about-image">
+                <img src="images/resources/abt.png" alt="TV Image">
+            </div>
 
-                <div class="gallery-image-container">
-                    <a href="tv.html">
-                        <img src="images/gallery/24-hd.png" alt="VUxx 24 Full HD TV" class="gallery-image">
-                    </a>
-                </div>
+        </div>
+    </section>
 
-                <div class="product-pricing">
-                    <div class="product-name">24&quot; Full HD</div>
-                    <div class="price-original">
-                        <span class="original-price">₹19,167</span>
-                    </div>
-                    <div class="price-discounted">
-                        <span class="discounted-price">₹11,500</span>
-                    </div>
-                </div>
 
-                <a href="tel:9178134139" class="call-now">📞 Call Now: 9178134139</a>
+    <!-- ================= PROMISE SECTION ================= -->
+
+    <section id="promise" class="promise-section">
+
+        <div class="promise-container">
+
+            <h3>Our Promise</h3>
+
+            <p>
+                At Crown India, we don’t just sell LED TVs — we deliver quality, trust,
+                and a superior viewing experience that transforms everyday entertainment
+                into something extraordinary.
+            </p>
+
+            <p class="perfect-for">
+                Perfect For 🏠 Homes | 🏢 Offices | 🏨 Hotels | 🏫 Institutions | 🛍 Retail Stores
+            </p>
+
+        </div>
+    </section>
+
+
+
+    <!-- ================= CTA DARK SECTION ================= -->
+
+    <section class="cta-section">
+
+        <div class="cta-overlay">
+            <h2>CHECK OUT OUR LATEST PRODUCT !</h2>
+            <a href="#product">
+  <button class="cta-btn">CHECK NOW</button>
+</a>
+        </div>
+
+    </section>
+    <!-- ================= PRODUCTS SECTION ================= -->
+
+    <section id="product" class="products-section">
+
+        <div class="products-title">
+            <h2>OUR PRODUCTS</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="products-container">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=600&q=80">
+                <h3>21 Inch Normal</h3>
+                <p class="red-text">Down Payment:-</p>
+                <p class="red-text">EMI:-</p>
+                <p class="red-text">Sale Price:- 7499</p>
+                <p class="mrp">MRP:- Rs. <span>8800</span></p>
+                <button class="book-btn">Book Now</button>
+            </div>
+
+            <!-- Product 2 (Highlighted like screenshot) -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80">
+                <h3>24 Inch Normal Led Tv</h3>
+                <p class="red-text">Down Payment:-</p>
+                <p class="red-text">EMI:-</p>
+                <p class="red-text">Sale Price:- 9999</p>
+                <p class="mrp">MRP:- Rs. <span>11200</span></p>
+                <button class="book-btn">Book Now</button>
             </div>
 
             <!-- Product 3 -->
-            <div class="gallery-item">
-                <div class="discount-badge">40% OFF</div>
-
-                <div class="gallery-image-container">
-                    <a href="fridge.html">
-                        <img src="images/gallery/glry-2.jfif" alt="VUxx 24 Smart TV" class="gallery-image">
-                    </a>
-                </div>
-
-                <div class="product-pricing">
-                    <div class="product-name">24&quot; Smart</div>
-                    <div class="price-original">
-                        <span class="original-price">₹20,833</span>
-                    </div>
-                    <div class="price-discounted">
-                        <span class="discounted-price">₹12,500</span>
-                    </div>
-                </div>
-
-                <a href="tel:9178134139" class="call-now">📞 Call Now: 9178134139</a>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=600&q=80">
+                <h3>40 Inch Smart LED TV</h3>
+                <p class="red-text">Down Payment:-</p>
+                <p class="red-text">EMI:-</p>
+                <p class="red-text">Sale Price:- 22500</p>
+                <p class="mrp">MRP:- Rs. <span>31999</span></p>
+                <button class="book-btn">Book Now</button>
             </div>
 
             <!-- Product 4 -->
-            <div class="gallery-item">
-                <div class="discount-badge">40% OFF</div>
-
-                <div class="gallery-image-container">
-                    <a href="washingmechine.html">
-                        <img src="images/gallery/glry-3.jfif" alt="VUxx 32 Smart TV" class="gallery-image">
-                    </a>
-                </div>
-
-                <div class="product-pricing">
-                    <div class="product-name">32&quot; Smart</div>
-                    <div class="price-original">
-                        <span class="original-price">₹26,999</span>
-                    </div>
-                    <div class="price-discounted">
-                        <span class="discounted-price">₹16,000</span>
-                    </div>
-                </div>
-
-                <a href="tel:9178134139" class="call-now">📞 Call Now: 9178134139</a>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80">
+                <h3>50 Inch Smart LED TV</h3>
+                <p class="red-text">Down Payment:-</p>
+                <p class="red-text">EMI:-</p>
+                <p class="red-text">Sale Price:- 43000</p>
+                <p class="mrp">MRP:- Rs. <span>69999</span></p>
+                <button class="book-btn">Book Now</button>
             </div>
 
         </div>
-    </div>
-</section>
 
+    </section>
+    <!-- FAQ Section Start -->
+    <section class="faq-section">
+        <div class="container">
 
+            <h2 class="faq-title">
+                <span></span>
+                VUXX INDIA – FREQUENTLY ASKED QUESTIONS
+            </h2>
 
-        <style>
-            .call-now {
-                display: block;
-                margin: 12px 10px 10px;
-                padding: 10px;
-                text-align: center;
-                background: #0384CE;
-                color: #fff;
-                font-size: 14px;
-                font-weight: 600;
-                border-radius: 6px;
-                text-decoration: none;
-            }
-
-            .call-now:hover {
-                background: #0384CE;
-            }
-
-            /* Product Pricing Styles */
-            /* Gallery Section Styles */
-            .gallery-section {
-                padding: 60px 0;
-                background-color: #f8f9fa;
-            }
-
-            .gallery-section .section-title {
-                text-align: center;
-                margin-bottom: 40px;
-            }
-
-            .gallery-section .section-title h2 {
-                color: #333;
-                font-size: 2.2rem;
-                margin-bottom: 10px;
-                position: relative;
-                display: inline-block;
-            }
-
-            .gallery-section .section-title h2:after {
-                content: '';
-                position: absolute;
-                width: 60px;
-                height: 3px;
-                background: #ff6b35;
-                bottom: -10px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .gallery-section .section-title h4 {
-                color: #ff6b35;
-                font-size: 1.3rem;
-                margin-top: 15px;
-                font-weight: 600;
-            }
-
-            .gallery-grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 30px;
-                margin-top: 20px;
-            }
-
-            .gallery-item {
-                position: relative;
-                border-radius: 12px;
-                overflow: hidden;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                transition: all 0.3s ease;
-                background: white;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .gallery-item:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            }
-
-            .gallery-image-container {
-                width: 100%;
-                height: 250px;
-                overflow: hidden;
-                position: relative;
-            }
-
-            .gallery-image {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-                transition: transform 0.5s ease;
-            }
-
-            .gallery-item:hover .gallery-image {
-                transform: scale(1.1);
-            }
-
-            /* Product Pricing Styles */
-            .product-pricing {
-                padding: 20px 15px;
-                background: white;
-                text-align: center;
-                border-top: 1px solid #eee;
-                flex-grow: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-
-            .price-original {
-                margin-bottom: 5px;
-            }
-
-            .original-price {
-                color: #ff0000;
-                text-decoration: line-through;
-                font-size: 1.1rem;
-                font-weight: 500;
-            }
-
-            .price-discounted {
-                margin-top: 5px;
-            }
-
-            .discounted-price {
-                color: #333;
-                font-size: 1.4rem;
-                font-weight: 700;
-                color: #ff6b35;
-            }
-
-            .product-name {
-                font-size: 1rem;
-                color: #555;
-                margin-bottom: 10px;
-                font-weight: 500;
-            }
-
-            /* Discount badge */
-            .discount-badge {
-                position: absolute;
-                top: 15px;
-                right: 15px;
-                background: #ff6b35;
-                color: white;
-                padding: 6px 12px;
-                border-radius: 20px;
-                font-size: 0.85rem;
-                font-weight: bold;
-                z-index: 2;
-                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-            }
-
-            /* Responsive adjustments */
-            @media (max-width: 1200px) {
-                .gallery-grid {
-                    grid-template-columns: repeat(3, 1fr);
-                    gap: 25px;
-                }
-            }
-
-            @media (max-width: 992px) {
-                .gallery-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 20px;
-                }
-
-                .gallery-image-container {
-                    height: 220px;
-                }
-            }
-
-            @media (max-width: 768px) {
-                .gallery-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 15px;
-                }
-
-                .gallery-section {
-                    padding: 40px 0;
-                }
-
-                .gallery-section .section-title h2 {
-                    font-size: 1.8rem;
-                }
-
-                .gallery-image-container {
-                    height: 200px;
-                }
-
-                .discounted-price {
-                    font-size: 1.3rem;
-                }
-
-                .original-price {
-                    font-size: 1rem;
-                }
-            }
-
-            @media (max-width: 576px) {
-                .gallery-grid {
-                    grid-template-columns: 1fr;
-                    max-width: 350px;
-                    margin: 0 auto;
-                    gap: 25px;
-                }
-
-                .gallery-image-container {
-                    height: 250px;
-                }
-
-                .discount-badge {
-                    font-size: 0.8rem;
-                    padding: 5px 10px;
-                }
-            }
-
-            /* Header adjustments */
-            .brand-title h2 {
-                color: #ff6b35 !important;
-                margin: 0 !important;
-                font-size: 1.9rem !important;
-                font-weight: bold !important;
-                padding-left: 410px !important;
-            }
-
-            .spinner {
-                width: 50px;
-                height: 50px;
-                border: 5px solid #f3f3f3;
-                border-top: 5px solid #ff6b35;
-                border-radius: 50%;
-                animation: spin 1s linear infinite;
-            }
-
-            @keyframes spin {
-                0% {
-                    transform: rotate(0deg);
-                }
-
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
-        </style>
-
-        <!-- Rest of your content remains exactly the same -->
-        <section class="feature-one">
-    <div class="container-fluid">
-        <div class="row no-gutters">
-
-            <!-- Left Image -->
-            <div class="custom-col-39">
-                <div class="video-one">
-                    <img src="images/resources/vuxx-repair.png" alt="VUxx Service Support" />
+            <div class="faq-item">
+                <button class="faq-question">
+                    What does Crown India do?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Crown India manufactures and sells high-quality LED and Smart TVs at affordable prices.</p>
                 </div>
             </div>
 
-            <!-- Right Content -->
-            <div class="custom-col-61">
-                <div class="feature-one__content-block">
-                    <span class="feature-one__curvs"></span>
-
-                    <div class="inner-content">
-                        <div class="block-title">
-                            <h2 class="block-title__title block-title__light-color">
-                                Our Speciality
-                            </h2>
-
-                            <p class="block-title__text block-title__light-color">
-                                Experience quality VUxx home appliances with expert guidance,
-                                professional installation, and dependable after-sales service.
-                                We focus on comfort, performance, and customer satisfaction.
-                            </p>
-
-                            <!-- CONTACT / CALL NOW -->
-                            <div class="feature-one__call">
-                                <span>📞 Contact Us:</span>
-                                <a href="tel:9178134139">+91 91781 34139</a>
-                            </div>
-                        </div>
-
-                        <div class="row high-gutters">
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="feature-one__single">
-                                    <div class="feature-one__icon">
-                                        <i class="clainc-icon-prize-badge-with-star-and-ribbon"></i>
-                                    </div>
-                                    <div class="feature-one__content">
-                                        <h3 class="feature-one__title">
-                                            <a href="#">Trusted Quality</a>
-                                        </h3>
-                                        <p class="feature-one__text">
-                                            Genuine VUxx products known for durability,
-                                            performance, and long-lasting value.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="feature-one__single">
-                                    <div class="feature-one__icon">
-                                        <i class="clainc-icon-operating-room"></i>
-                                    </div>
-                                    <div class="feature-one__content">
-                                        <h3 class="feature-one__title">
-                                            <a href="#">Expert Installation</a>
-                                        </h3>
-                                        <p class="feature-one__text">
-                                            Skilled technicians ensure safe and proper
-                                            installation for hassle-free usage.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-                        </div><!-- /.row -->
-                    </div><!-- /.inner-content -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    What kinds of products can I buy from Crown India?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We offer Normal LED TVs and Smart LED TVs in different screen sizes like 21", 24", 40", and 50".
+                    </p>
                 </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I contact Crown India for support or purchase?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>You can contact us through our Contact Us page or call our customer support number.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Where is Crown India located?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Crown India operates across India with customer support services available nationwide.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do Crown India TVs come with warranty or service support?
+                    <span class="icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, all Crown India TVs come with manufacturer warranty and service support.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn">↑</button>
+    <!-- GET IN TOUCH SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+
+            <h2 class="contact-title">GET IN TOUCH</h2>
+            <div class="title-underline"></div>
+
+            <div class="contact-wrapper">
+
+                <!-- Phone -->
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <p>9178134139</p>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <p> Rrockstarr999@gmail.com</p>
+                </div>
+
+                <!-- Address -->
+                <div class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <p>
+                        Old town kapileswar,<br>
+                        Bhubaneswar, ODISHA
+                    </p>
+                </div>
+
             </div>
         </div>
-    </div>
-</section>
-<style>
-    .feature-one__call {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
-}
+    </section>
+    <!-- LOCATION SECTION START -->
+    <section class="location-section">
 
-.feature-one__call a {
-    color: #ffcc00;
-    margin-left: 6px;
-    text-decoration: none;
-}
+        <h2 class="location-title">OUR LOCATION</h2>
+        <div class="location-underline"></div>
 
-.feature-one__call a:hover {
-    text-decoration: underline;
-}
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3743.666751875867!2d85.82377577523513!3d20.23116448122598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDEzJzUyLjIiTiA4NcKwNDknMzQuOSJF!5e0!3m2!1sen!2sin!4v1770030130931!5m2!1sen!2sin"
+                width="100%" height="625" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
 
-</style>
-        <section class="feature-two">
-            <div class="container">
-                <img src="images/resources/homee584-740.png" alt="Unique Electronics"
-                    class="feature-two__person wow fadeInUp" />
+    </section>
+    <!-- LOCATION SECTION END -->
 
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="feature-two__content-block">
-                            <div class="block-title">
-                                <h2 class="block-title__title">Why Choose Unique Electronics</h2>
-                                <!-- /.block-title__title -->
+    <!-- FOOTER SECTION START -->
+    <footer class="footer-section">
 
-                                <p class="block-title__text">
-                                    At Unique Electronics, we are committed to delivering high-quality home appliances
-                                    that bring comfort and convenience to your everyday life. From VUxx LED TVs to
-                                    energy-efficient washing machines and refrigerators, we offer genuine products,
-                                    expert installation, and reliable after-sales service.<br>
-                                    With a customer-first approach and local expertise in Bhubaneswar, we ensure a
-                                    smooth and trustworthy buying experience.
-                                </p>
-                                <!-- /.block-title__text -->
-                            </div><!-- /.block-title -->
+        <div class="footer-container">
 
-                            <ul class="nav nav-tabs feature-two__tab-title" role="tablist">
-                                <li class="nav-item feature-two__tab-title-item">
-                                    <a class="nav-link feature-two__tab-title-link active" href="#mission" role="tab"
-                                        data-toggle="tab">Mission</a>
-                                </li>
-                                <li class="nav-item feature-two__tab-title-item">
-                                    <a class="nav-link feature-two__tab-title-link" href="#vision" role="tab"
-                                        data-toggle="tab">Vision</a>
-                                </li>
-                                <li class="nav-item feature-two__tab-title-item">
-                                    <a class="nav-link feature-two__tab-title-link" href="#success" role="tab"
-                                        data-toggle="tab">Success</a>
-                                </li>
-                                <li class="nav-item feature-two__tab-title-item">
-                                    <a class="nav-link feature-two__tab-title-link" href="#history" role="tab"
-                                        data-toggle="tab">History</a>
-                                </li>
-                            </ul>
+            <!-- Left Logo & Description -->
+            <div class="footer-col">
+                <h2 class="footer-logo">
+                    <span>V</span>UXX INDIA
+                </h2>
+                <p>
+                    VUxx Electronics offers smart TVs, refrigerators, 
+                    and washing machines with easy buying, professional installation,
+                     and reliable service support.
+                </p>
+            </div>
 
-                            <div class="feature-two__tab-content tab-content">
-                                <div role="tabpanel" class="tab-pane show active animated fadeInUp" id="mission">
-                                    <div class="feature-two__content">
-                                        <p class="feature-two__text">
-                                            To provide quality home appliances with honest pricing, professional
-                                            installation,
-                                            and dependable service that enhance everyday living.
-                                        </p>
-                                    </div><!-- /.feature-two__content -->
-                                </div><!-- /.tab-pane -->
+            <!-- Information Links -->
+            <div class="footer-col">
+                <h3>INFORMATIONS</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">VUXXINDIA-Founder</a></li>
+                    <li><a href="#">Odisha</a></li>
+                </ul>
+            </div>
 
-                                <div role="tabpanel" class="tab-pane animated fadeInUp" id="vision">
-                                    <div class="feature-two__content">
-                                        <p class="feature-two__text">
-                                            To become a trusted electronics destination in Bhubaneswar by offering
-                                            innovative products, excellent service, and long-term customer satisfaction.
-                                        </p>
-                                    </div><!-- /.feature-two__content -->
-                                </div><!-- /.tab-pane -->
+            <!-- Social Media -->
+            <div class="footer-col">
+                <h3>FOLLOW US</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
 
-                                <div role="tabpanel" class="tab-pane animated fadeInUp" id="success">
-                                    <div class="feature-two__content">
-                                        <p class="feature-two__text">
-                                            Our success comes from satisfied customers who trust us for genuine
-                                            products,
-                                            timely installation, and reliable after-sales support.
-                                        </p>
-                                    </div><!-- /.feature-two__content -->
-                                </div><!-- /.tab-pane -->
+        </div>
 
-                                <div role="tabpanel" class="tab-pane animated fadeInUp" id="history">
-                                    <div class="feature-two__content">
-                                        <p class="feature-two__text">
-                                            Unique Electronics was established with a goal to deliver quality
-                                            electronics
-                                            and honest service to local customers.
-                                        </p>
-                                        <p class="feature-two__text">
-                                            Over the years, we have grown through trust, product quality, and consistent
-                                            service, adapting to the latest home appliance technologies.
-                                        </p>
-                                    </div><!-- /.feature-two__content -->
-                                </div><!-- /.tab-pane -->
-                            </div><!-- /.tab-content -->
-                        </div><!-- /.feature-two__content-block -->
-                    </div><!-- /.col-lg-7 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.feature-two -->
+        <hr>
 
-        <section class="testimonials-one">
-            <div class="container">
-                <div class="block-title text-center">
-                    <h2 class="block-title__title block-title__light-color">Customer Reviews</h2>
-                    <!-- /.block-title__title -->
-                    <p class="block-title__text block-title__light-color">
-                        See what our customers say about their experience with Unique Electronics. <br>
-                        Trusted products, smooth installation, and reliable service.
-                    </p><!-- /.block-title__text -->
-                </div><!-- /.block-title -->
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+            © 2021 VUXX INDIA - All Rights Reserved. Designed by
+            <span class="highlight">UNIQUE ELECTRONICS</span>
+        </div>
 
-                <div class="testimonials-one__carousel owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="testimonials-one__single">
-                            <div class="testimonials-one__icon">
-                                <div class="testimonials-one__qoute">
-                                    <img src="images/resources/testi-qoute-1-1.png" alt="Quote" />
-                                </div>
-                                <div class="inner-block">
-                                    <img src="images/resources/Male.png" alt="Customer" />
-                                </div>
-                            </div>
-                            <div class="testimonials-one__content">
-                                <h3 class="testimonials-one__title">Akash Kumar</h3>
-                                <p class="testimonials-one__text">
-                                    Bought a VUxx LED TV from Unique Electronics. Excellent picture quality
-                                    and smooth installation service.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+    </footer>
 
-                    <div class="item">
-                        <div class="testimonials-one__single">
-                            <div class="testimonials-one__icon">
-                                <div class="testimonials-one__qoute">
-                                    <img src="images/resources/testi-qoute-1-1.png" alt="Quote" />
-                                </div>
-                                <div class="inner-block">
-                                    <img src="images/resources/Male.png" alt="Customer" />
-                                </div>
-                            </div>
-                            <div class="testimonials-one__content">
-                                <h3 class="testimonials-one__title">Karthik Reddy</h3>
-                                <p class="testimonials-one__text">
-                                    Very good service and reasonable prices. Refrigerator installation
-                                    was done on time and professionally.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn">↑</button>
 
-                    <div class="item">
-                        <div class="testimonials-one__single">
-                            <div class="testimonials-one__icon">
-                                <div class="testimonials-one__qoute">
-                                    <img src="images/resources/testi-qoute-1-1.png" alt="Quote" />
-                                </div>
-                                <div class="inner-block">
-                                    <img src="images/resources/Male.png" alt="Customer" />
-                                </div>
-                            </div>
-                            <div class="testimonials-one__content">
-                                <h3 class="testimonials-one__title">Aryan Mishra</h3>
-                                <p class="testimonials-one__text">
-                                    One of the best electronics stores in the area. Staff is very helpful
-                                    and explained all features clearly before purchase.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="testimonials-one__single">
-                            <div class="testimonials-one__icon">
-                                <div class="testimonials-one__qoute">
-                                    <img src="images/resources/testi-qoute-1-1.png" alt="Quote" />
-                                </div>
-                                <div class="inner-block">
-                                    <img src="images/resources/Female.png" alt="Customer" />
-                                </div>
-                            </div>
-                            <div class="testimonials-one__content">
-                                <h3 class="testimonials-one__title">Renuka Das</h3>
-                                <p class="testimonials-one__text">
-                                    Purchased a washing machine. Smooth buying experience and
-                                    quick installation. Highly recommended.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="testimonials-one__single">
-                            <div class="testimonials-one__icon">
-                                <div class="testimonials-one__qoute">
-                                    <img src="images/resources/testi-qoute-1-1.png" alt="Quote" />
-                                </div>
-                                <div class="inner-block">
-                                    <img src="images/resources/Male.png" alt="Customer" />
-                                </div>
-                            </div>
-                            <div class="testimonials-one__content">
-                                <h3 class="testimonials-one__title">Sahil Khan</h3>
-                                <p class="testimonials-one__text">
-                                    Genuine products and good after-sales service.
-                                    Happy with my fridge purchase.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="testimonials-one__single">
-                            <div class="testimonials-one__icon">
-                                <div class="testimonials-one__qoute">
-                                    <img src="images/resources/testi-qoute-1-1.png" alt="Quote" />
-                                </div>
-                                <div class="inner-block">
-                                    <img src="images/resources/Male.png" alt="Customer" />
-                                </div>
-                            </div>
-                            <div class="testimonials-one__content">
-                                <h3 class="testimonials-one__title">Rohit Patnaik</h3>
-                                <p class="testimonials-one__text">
-                                    Best electronics shop in Old Town, Bhubaneswar.
-                                    Honest pricing and reliable service.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- /.testimonials-one__carousel -->
-            </div><!-- /.container -->
-        </section><!-- /.testimonials-one -->
-
-        <footer class="footer-one">
-            <div class="footer-one__middle">
-                <div class="container">
-                    <div class="inner-container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="footer-one__widget about-widget">
-                                    <a href="index.html" class="footer-one__logo">
-                                        <img src="images/resources/logo1.png" alt="Unique Electronics Logo"
-                                            style="height: 100px; width: auto; max-width: 100%;" />
-                                    </a>
-                                    <p class="footer-one__text">
-                                        VUxx Electronics offers smart TVs, refrigerators, and washing machines with
-                                        easy buying, professional installation, and reliable service support.
-                                    </p>
-                                </div><!-- /.footer-one_widget -->
-                            </div><!-- /.col-lg-4 -->
-
-                            <div class="col-lg-2 col-md-6 col-sm-12">
-                                <div class="footer-one__widget contact-widget">
-                                    <h3 class="footer-one__widget-title">Email</h3><!-- /.footer-one__widget-title -->
-                                    <ul class="footer-one__contact-list">
-                                        <li class="footer-one__contact-list-item">Rrockstarr999@gmail.com</li>
-                                    </ul><!-- /.footer-one__contact-list -->
-                                </div><!-- /.footer-one_widget -->
-                            </div><!-- /.col-lg-2 -->
-
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="footer-one__widget contact-widget">
-                                    <h3 class="footer-one__widget-title">Phone</h3><!-- /.footer-one__widget-title -->
-                                    <ul class="footer-one__contact-list">
-                                        <li class="footer-one__contact-list-item">+9178134139</li>
-                                    </ul><!-- /.footer-one__contact-list -->
-                                </div><!-- /.footer-one_widget -->
-                            </div><!-- /.col-lg-3 -->
-
-                            <div class="col-lg-3 col-md-6 col-sm-12">
-                                <div class="footer-one__widget contact-widget">
-                                    <h3 class="footer-one__widget-title">Address</h3><!-- /.footer-one__widget-title -->
-                                    <ul class="footer-one__contact-list">
-                                        <li class="footer-one__contact-list-item">Old town kapileswar,</li>
-                                        <li class="footer-one__contact-list-item">Bhubaneswar</li>
-                                    </ul><!-- /.footer-one__contact-list -->
-                                </div><!-- /.footer-one_widget -->
-                            </div><!-- /.col-lg-3 -->
-                        </div><!-- /.row -->
-                    </div><!-- /.inner-container -->
-                </div><!-- /.container -->
-            </div><!-- /.footer-one__middle -->
-
-            <div class="footer-one__bottom">
-                <div class="container">
-                    <p class="footer-one__copy-text text">&copy; Unique Electronics | All Right Reserved</p>
-                </div><!-- /.container -->
-            </div><!-- /.footer-one__bottom -->
-        </footer><!-- /.footer-one -->
-
-    </div><!-- /.page-wrapper -->
-
-    <a href="#" data-target="html" data-target-offset="0" class="scroll-to-target scroll-to-top">
-        <i class="material-icons">keyboard_arrow_up</i>
-    </a>
-
-    <!-- JavaScript -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/bootstrap-select.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/script.js"></script>
-
-    <!-- Mobile Menu Script -->
+    <!-- ================= JAVASCRIPT ================= -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.getElementById('mobileMenuToggle');
-            const mainNavigation = document.getElementById('mainNavigation');
-            const navLinks = document.querySelectorAll('.navigation-box a');
+        let currentIndex = 0;
+        const slider = document.getElementById("slider");
+        const totalSlides = document.querySelectorAll(".slide").length;
 
-            if (menuToggle && mainNavigation) {
-                // Toggle mobile menu
-                menuToggle.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    e.stopPropagation();
+        function updateSlider() {
+            slider.style.transform = "translateX(-" + (currentIndex * 100) + "%)";
+        }
 
-                    mainNavigation.classList.toggle('open');
-
-                    // Toggle menu icon
-                    const icon = this.querySelector('i');
-                    if (mainNavigation.classList.contains('open')) {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
-                    } else {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    }
-                });
-
-                // Close menu when clicking on links
-                navLinks.forEach(link => {
-                    link.addEventListener('click', function () {
-                        if (window.innerWidth <= 992) {
-                            mainNavigation.classList.remove('open');
-                            const icon = menuToggle.querySelector('i');
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        }
-                    });
-                });
-
-                // Close menu when clicking outside
-                document.addEventListener('click', function (e) {
-                    if (window.innerWidth <= 992 &&
-                        mainNavigation.classList.contains('open') &&
-                        !e.target.closest('.main-navigation') &&
-                        !e.target.closest('.menu-toggler')) {
-                        mainNavigation.classList.remove('open');
-                        const icon = menuToggle.querySelector('i');
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    }
-                });
-
-                // Handle window resize
-                window.addEventListener('resize', function () {
-                    if (window.innerWidth > 992) {
-                        mainNavigation.classList.remove('open');
-                        const icon = menuToggle.querySelector('i');
-                        if (icon) {
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        }
-                    }
-                });
+        function nextSlide() {
+            currentIndex++;
+            if (currentIndex >= totalSlides) {
+                currentIndex = 0;
             }
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            }
+            updateSlider();
+        }
+
+        /* Auto Slide */
+        setInterval(nextSlide, 4000);
+
+
+        const products = document.querySelectorAll(".product-card");
+
+        products.forEach(product => {
+            product.addEventListener("click", function () {
+
+                // remove active from all
+                products.forEach(item => {
+                    item.classList.remove("active");
+                });
+
+                // add active to clicked one
+                this.classList.add("active");
+
+            });
         });
     </script>
+    <script>
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+            question.addEventListener("click", () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector(".icon");
+
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.textContent = "+";
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    icon.textContent = "−";
+                }
+            });
+        });
+
+        /* Scroll To Top */
+        const scrollBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 200) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        scrollBtn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+    <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 200) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        scrollBtn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+
+
 </body>
 
 </html>
