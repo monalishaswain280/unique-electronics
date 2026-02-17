@@ -73,15 +73,13 @@
         }
 
         .products-container {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            flex-wrap: wrap;
         }
 
         .product-card {
             background: #ffffff;
-            width: 23%;
             padding: 30px 20px;
             border: 1px solid #ddd;
             transition: 0.3s;
@@ -593,7 +591,7 @@
             <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#product">Products</a></li>
-                <li><a href="service.html">Services</a></li>
+                <li><a href="service.html">Reapair & service</a></li>
                 <li><a href="#contact">Contact Us</a></li>
 
         </ul>
@@ -882,16 +880,55 @@
 
             </div>
 
-            <!-- <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80"
-                    alt="tv">
-                <h3>50 Inch Smart LED TV</h3>
+            <div class="product-card">
+                <a href="40-smart.html">
+                    <img src="images/resources/40-smart.png" alt="40 inch Smart TV">
+                </a>
+                <h3>40" Smart</h3>
                 <p class="red-text">Down Payment:-</p>
                 <p class="red-text">EMI:-</p>
-                <p class="red-text">Sale Price:- 43000</p>
-                <p class="mrp">MRP:- Rs. <span>69999</span></p>
-                <button class="book-btn">Book Now</button>
-            </div> -->
+                <p class="red-text">Discount Price:- ₹13,500</p>
+                <p class="mrp">MRP:- Rs. <span>25,000</span></p>
+
+                <a href="https://wa.me/9178134139" target="_blank">
+                    <button class="book-btn">Book Now</button>
+                </a>
+            </div>
+
+
+
+            <div class="product-card">
+                <a href="43-smart.html">
+                    <img src="images/resources/43-smart.png" alt="43 inch Smart TV">
+                </a>
+                <h3>43" Smart</h3>
+                <p class="red-text">Down Payment:-</p>
+                <p class="red-text">EMI:-</p>
+                <p class="red-text">Sale Price:- ₹15,000</p>
+                <p class="mrp">MRP:- Rs. <span>26,000</span></p>
+
+                <a href="https://wa.me/9178134139" target="_blank">
+                    <button class="book-btn">Book Now</button>
+                </a>
+
+            </div>
+
+
+            <div class="product-card">
+                <a href="50-smart.html">
+                    <img src="images/resources/50-smart.png" alt="50 inch Smart TV">
+                </a>
+                <h3>50" Smart</h3>
+                <p class="red-text">Down Payment:-</p>
+                <p class="red-text">EMI:-</p>
+                <p class="red-text">Sale Price:- ₹28,000</p>
+                <p class="mrp">MRP:- Rs. <span>60,000</span></p>
+
+                <a href="https://wa.me/9178134139" target="_blank">
+                    <button class="book-btn">Book Now</button>
+                </a>
+            </div>
+
 
         </div>
     </section>
